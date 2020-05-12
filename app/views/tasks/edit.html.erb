@@ -1,9 +1,6 @@
 <h1>id <%=@task.id%>の編集</h1>
-<%= form_with(model: @task, local:true) do |f| %>
-    <%= f.label :content, "タスク内容" %>
-    <%= f.text_field :content %>
+<% button_message="反映"%>
 
-    <%= f.submit "反映"%>
-<% end %>
+<%= render "form", task: @task, button_message: button_message%>
 
 <%= link_to "一覧に戻る", tasks_path %>
