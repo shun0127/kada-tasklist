@@ -1,0 +1,6 @@
+<h1>id <%=@user.id%>の編集</h1>
+<% button_message="変更"%>
+
+<%= render "form_user", user: @user, button_message: button_message%>
+
+<%= link_to "ユーザ情報に戻る", @user %>

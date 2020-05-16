@@ -1,0 +1,11 @@
+<h1>ログイン</h1>
+
+<% button_message="ログイン"%>
+
+<%=render "form_session", path: login_path , button_message: button_message%>
+
+<p>
+    New user? <%= link_to "新規登録", signup_path %>
+</p>
+
+

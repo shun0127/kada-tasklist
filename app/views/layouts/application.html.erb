@@ -10,6 +10,15 @@
   </head>
 
   <body>
+    <ul class="list-unstyled">
+      <li><a href="/">ホーム</a></li>
+      <% if logged_in? %>
+        <li> <%= link_to 'タスク一覧', root_path %>  </li>
+        <li> <%= link_to 'ユーザ情報', user_path(current_user) %>  </li>
+        <li><%= link_to 'ログアウト', logout_path, method: :delete %>  </li>
+      <% end %>
+    </ul>
+    <hr>
     <div class="container">
       <%= render "layouts/flash_tasks" %>
       <%= yield %>
