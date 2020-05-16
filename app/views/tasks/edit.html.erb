@@ -1,6 +1,6 @@
 <h1>id <%=@task.id%>の編集</h1>
 <% button_message="反映"%>
 
-<%= render "form", task: @task, button_message: button_message%>
+<%= render "form_task", task: @task, button_message: button_message%>
 
 <%= link_to "一覧に戻る", tasks_path %>
