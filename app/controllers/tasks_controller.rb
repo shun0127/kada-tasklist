@@ -6,7 +6,6 @@ before_action :correct_user, only: [:show, :edit,:update, :destroy]
     end
     
     def show
-        @task = current_user.tasks.find(params[:id])
     end
     
     def new
@@ -25,12 +24,9 @@ before_action :correct_user, only: [:show, :edit,:update, :destroy]
     end
     
     def edit
-        @task = current_user.tasks.find(params[:id])
     end
     
     def update
-        @task = current_user.tasks.find(params[:id])
-        
         if @task.update(task_params)
             flash[:success] = "タスクを更新しました"
             redirect_to @task
